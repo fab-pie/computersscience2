@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pressure, Temperature, Altitude Sensor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMP censor</title>
+  <link rel="stylesheet" href="bmp.css">
+</head>
+<body>
+  <a href="home.html" class="home-button">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+      <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+    </svg>
+  </a>
+
+  <h1>Pressure, Temperature, Altitude Sensor</h1>
+  <div id="sensorData">
+  <div class="thermometer">
+    <img src="data:image/png;base64,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" alt="Thermometer" height=200% width=200%>
+    <p>Temperature: <span id="temperature">--</span> °C</p>
+  </div>
+  <div class="pressure">
+    <img src="https://instrumentys.com/wp-content/uploads/2020/12/PRESSION-1.png" alt="Pressure">
+    <p>Pressure: <span id="pressure">--</span> Pa</p>
+  </div>
+  <div class="altitude">
+  <img src="https://cdn-icons-png.flaticon.com/512/1727/1727320.png" alt="Altitude">
+  <p>Altitude: <span id="altitude">--</span> m</p>
+  </div>
+  <script src="bmp.js" defer></script>
+</body>
+</html>

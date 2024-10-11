@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED control</title>
+    <link rel="stylesheet" href="LED.css">
+</head>
+<body>
+    <a href="home.html" class="home-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+          <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+        </svg>
+      </a>
+      <h1>LED</h1>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/1184/1184068.png" alt="LED" height=50% >
+        <input type="range" id="ledControl" min="0" max="255" value="0">
+        <p>Intensité de la LED: <span id="ledIntensity">0</span></p>
+      </div>
+    
+      <script src="LED.js" defer></script>
+</body>
+</html>

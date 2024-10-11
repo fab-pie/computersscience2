@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accelerometer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accelerometer</title>
+  <link rel="stylesheet" href="accelero.css">
+</head>
+<body>
+  <a href="home.html" class="home-button">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+      <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+    </svg>
+  </a>
+  <div class="Axe">
+    <img src="data:image/png;base64,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" alt="Axe 3D">
+  </div>
+  <h1>Accelerometer</h1>
+  <div id="sensorData">
+    <p>X: <span id="x-axis">-</span></p>
+    <p>Y: <span id="y-axis">-</span></p>
+    <p>Z: <span id="z-axis">-</span></p>
+  </div>
+
+  <script src="accelero.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://img.freepik.com/vecteurs-libre/fond-futuriste-degrade-concept-connexion_23-2149110434.jpg") ;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+h1 {
+    margin-bottom: 20px; 
+    font-size: 2.5rem;
+    color: #fdfdfd;
+}
+
+#sensorData {
+    background-color: #2980b9; 
+    padding: 20px; 
+    border-radius: 10px;
+    font-size: 1.5rem; 
+    margin: 10px 0;  
+}
+
+.Axe{
+    order:3;
+    margin-top: 20px;
+}
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none; 
+}
+
+.home-button:hover svg {
+    transform: scale(1.1);
+}
+
+svg{
+    background-color: #fdfdfd;
+  }
